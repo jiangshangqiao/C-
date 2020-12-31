@@ -7,11 +7,46 @@ string aa = "Iloveyou!"
 string bb = aa.substr(2,3);
 => bb = "ove"
 
-string::find_first_of()、string::find_first_not_of()、string::find_last_of()、string::find_last_not_of()
+find_first_of(), find_first_not_of(), find_last_of(), find_lase_not_of()
+
+3. 冒泡排序
+从小到大
+void BubbleSort(int arr[], int n){
+  for(int i=0; i<n-1; i++){
+    for(int j=0; j<n-i-1; j++){
+      if(arr[j]>arr[j+1])
+        swap(arr[j], arr[j+1]);    // swap()：用于交换两个数值
+    }
+  }
+}
 
 
+4. string数组求长度
+
+(1) vector<>数组提供了v.size()方法可获取数组长度
+e.g.
+vector<vector<int>> v{ {1,2,3},{4,5,6,7,8},{9,10} };
+cout << v.size() << endl;		// 3 
+cout << v[1].size() << endl;	// 5
+
+(2) string对象也提供了s.size()获取字符串的长度，但是对于string类型数组没有办法直接获取.
+e.g.
+string s[] = { "hello","world!" };
+cout << s->size() << endl;		// 等价于s[0].size()
+cout << s[0].size() << endl;	// 5
+cout << s[1].size() << endl;	// 6
+
+法1：在使用string数组时，可以使用 vector<string> 利用vector容器保存string对象来操作，或者也可以使用我们原本的数组定义方式 string s[]。
+法2：
+string数组对象无法直接通过类中的方法获得其数组的元素个数，而我们又想到了 “数量 = 总价 / 单价” 这种计算方法。
+string对象存储的内容大小与其所占的空间（栈空间）是没有关系的，换句话说在一个string的数组中每个string字符串所占的空间相同，即单价唯一。
+使用 sizeof(s) / sizeof(s[0]) 来计算string数组的长度
 
 
+5. vector<>
+
+vector c(10)
+c.push_back(elem)  // 在尾部加入一个数据。
 
 
 
