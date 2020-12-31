@@ -7,7 +7,7 @@ string aa = "Iloveyou!"
 string bb = aa.substr(2,3);
 => bb = "ove"
 
-
+string::find_first_of()、string::find_first_not_of()、string::find_last_of()、string::find_last_not_of()
 
 
 
