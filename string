@@ -1,0 +1,19 @@
+1. float 转换为 string
+using namaspace std;
+string aa = to_string(3.14);
+
+2. 截取字符串
+string aa = "Iloveyou!"
+string bb = aa.substr(2,3);
+=> bb = "ove"
+
+
+
+
+
+
+
+
+
+
+
